@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Um cantinho feito com carinho para Maria Julia.">
+    <title>Para Meu amorzinho 💗</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="floating-background" aria-hidden="true">
+        <span>♡</span><span>✦</span><span>♡</span><span>✧</span>
+        <span>♡</span><span>✦</span><span>♡</span><span>✧</span>
+    </div>
+
+    <!-- =========================
+         TELA INICIAL
+    ========================== -->
+    <header class="hero">
+
+        <div class="cloud cloud-one"></div>
+        <div class="cloud cloud-two"></div>
+
+        <div class="hero-text">
+            <div class="tiny-label">feito especialmente para você ✨</div>
+
+            <h1>
+                Oii, Meu Amor...
+                <span>isso é para você. 💗</span>
+            </h1>
+
+            <p>
+                Eu queria fazer uma coisa diferente dessa vez.
+                Então criei um pequeno mundinho cheio de fofura,
+                carinho e algumas coisas que eu queria te dizer.
+            </p>
+
+            <button class="primary-button" onclick="goToLove()">
+                entrar no meu mundinho ♡
+            </button>
+        </div>
+
+        <div class="hero-character">
+            <div class="sparkle sparkle-one">✦</div>
+            <div class="sparkle sparkle-two">♡</div>
+
+            <div class="big-teddy">
+                🧸
+            </div>
+
+            <div class="flower">
+                🌷
+            </div>
+
+            <div class="mini-heart">♥</div>
+        </div>
+
+        <div class="bottom-hearts">♡　♡　♡　♡　♡</div>
+    </header>
+
+
+    <!-- =========================
+         PERSONAGENS
+    ========================== -->
+    <main id="love">
+
+        <section class="intro">
+            <span class="section-label">uma coleção de carinho</span>
+
+            <h2>
+                Cada fofura aqui<br>
+                tem algo para te contar...
+            </h2>
+
+            <p>
+                Clique nos personagens e descubra uma pequena
+                declaração que eu fiz pensando em você. 💌
+            </p>
+        </section>
+
+
+        <section class="character-grid">
+
+            <button class="character-card snoopy-card"
+                    onclick="openLetter('snoopy')">
+
+                <span class="tape"></span>
+
+                <div class="character-image"><img src="imagens/snoppy.png" alt=""></div>
+
+                <h3>Snoopy</h3>
+
+                <p>tem uma coisinha para você ♡</p>
+            </button>
+
+
+            <button class="character-card kitty-card"
+                    onclick="openLetter('kitty')">
+
+                <span class="tape"></span>
+
+                <div class="character-image"><img src="imagens/helokity.png" alt=""></div>
+
+                <h3>Hello Kitty</h3>
+
+                <p>abre aqui, meu amor ♡</p>
+            </button>
+
+
+            <button class="character-card bear-card"
+                    onclick="openLetter('bear')">
+
+                <span class="tape"></span>
+
+                <div class="character-image"><img src="imagens/ursin.png" alt=""></div>
+
+                <h3>Ursinho</h3>
+
+                <p>um abraço em forma de carta ♡</p>
+            </button>
+
+
+            <button class="character-card capy-card"
+                    onclick="openLetter('capy')">
+
+                <span class="tape"></span>
+
+                <div class="character-image"><img src="imagens/capivara.png" alt=""></div>
+
+                <h3>Capivara</h3>
+
+                <p>uma mensagem bem tranquila ♡</p>
+            </button>
+
+
+            <button class="character-card teddy-card"
+                    onclick="openLetter('teddy')">
+
+                <span class="tape"></span>
+
+                <div class="character-image"><img src="imagens/gatin.png" alt=""></div>
+
+                <h3>Ursinho fofo</h3>
+
+                <p>uma coisa que eu quero te contar ♡</p>
+            </button>
+
+
+            <button class="character-card heart-card"
+                    onclick="openLetter('heart')">
+
+                <span class="tape"></span>
+
+                <div class="character-image"><img src="imagens/coracao.png" alt=""></div>
+
+                <h3>Meu coração</h3>
+
+                <p>essa é importante...</p>
+            </button>
+
+        </section>
+
+
+        <!-- =========================
+             CARTA ESPECIAL
+        ========================== -->
+
+        <section class="special-section">
+
+            <div class="special-character">
+                🌷
+            </div>
+
+            <div class="special-content">
+
+                <span class="section-label">
+                    ps: ainda não acabou...
+                </span>
+
+                <h2>
+                    Você chegou até aqui.
+                    Então tem uma surpresa esperando por você. 🎁
+                </h2>
+
+                <p>
+                    Só abre quando estiver preparada para receber
+                    uma quantidade um pouco exagerada de fofura.
+                </p>
+
+                <button class="surprise-button"
+                        onclick="openSurprise()">
+                    abrir minha surpresa 💗
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        feito com muito carinho para <strong>Para o amor da minha vida</strong> ♡
+        <br>
+        <small>um pequeno site para uma pessoa muito especial.</small>
+    </footer>
+
+
+    <!-- =========================
+         MODAL DAS DECLARAÇÕES
+    ========================== -->
+
+    <div class="modal" id="letterModal">
+
+        <div class="modal-background"
+             onclick="closeLetter()">
+        </div>
+
+        <div class="letter">
+
+            <button class="close-button"
+                    onclick="closeLetter()">
+                ×
+            </button>
+
+            <div class="modal-character"
+                 id="modalCharacter">
+                🧸
+            </div>
+
+            <span class="section-label"
+                  id="modalName">
+                Para você
+            </span>
+
+            <h2 id="modalTitle">
+                Uma declaração para você
+            </h2>
+
+            <p id="modalText"></p>
+
+            <div class="letter-signature">
+                com amor, para você ♡
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         MODAL SURPRESA
+    ========================== -->
+
+    <div class="modal" id="surpriseModal">
+
+        <div class="modal-background"
+             onclick="closeSurprise()">
+        </div>
+
+        <div class="surprise">
+
+            <div class="giant-heart">
+                💗
+            </div>
+
+            <div class="stars">
+                ✦　✧　✦
+            </div>
+
+            <h2>
+                Amor...
+            </h2>
+
+            <p>
+                Se eu pudesse escolher uma pessoa para continuar
+                vivendo momentos especiais, rindo de coisas bobas,
+                criando memórias e fazendo planos...
+            </p>
+
+            <div class="final-message">
+                eu escolheria você. ♡
+            </div>
+
+            <p>
+                E escolheria de novo.
+            </p>
+
+            <button class="primary-button"
+                    onclick="closeSurprise()">
+                vem cá, meu amor 🧸
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
